@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;900&family=JetBrains+Mono:wght@400;500;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Space Grotesk", "Plus Jakarta Sans", sans-serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-brand-dark: #1e293b; 
+  --color-brand-mango: #00f0ff; /* Electric Cyber Cyan */
+  --color-brand-plantain: #39ff14; /* Radioactive Neon Green */
+  --color-brand-cream: #060b13; /* Deep Space Obsidian */
+  
+  --animate-infinite-scroll: infinite-scroll 40s linear infinite;
+  --animate-infinite-scroll-reverse: infinite-scroll-reverse 40s linear infinite;
+
+  @keyframes infinite-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @keyframes infinite-scroll-reverse {
+    from { transform: translateX(-50%); }
+    to { transform: translateX(0); }
+  }
+}
+
+body {
+  background-color: #050911;
+  color: #f1f5f9;
+  font-family: var(--font-sans);
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(0, 240, 255, 0.05) 0%, transparent 45%),
+    radial-gradient(circle at 90% 80%, rgba(57, 255, 20, 0.04) 0%, transparent 45%),
+    linear-gradient(rgba(255, 255, 255, 0.005) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.005) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 25px 25px, 25px 25px;
+  background-attachment: fixed;
+}
+
+/* AUTOMATIC FUTURISTIC STYLE SYSTEM OVERLAYS */
+
+/* 1. Universal light text forced for dark background legibility */
+.text-brand-dark {
+  color: #f8fafc !important;
+}
+.text-gray-900, .text-gray-800, .text-gray-700, .text-slate-900, .text-slate-800, .text-slate-700 {
+  color: #f8fafc !important;
+}
+.text-gray-650, .text-gray-600, .text-slate-600, .text-slate-500 {
+  color: #cbd5e1 !important;
+}
+.text-gray-500, .text-gray-400, .text-slate-450, .text-slate-400 {
+  color: #cbd5e1 !important;
+}
+.text-gray-300, .text-slate-300 {
+  color: #f1f5f9 !important;
+}
+
+/* 2. Glassmorphic panel styling for all cards & lists */
+.bg-white {
+  background-color: #0b1222 !important;
+  color: #f1f5f9 !important;
+  border-color: rgba(0, 240, 255, 0.15) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* 3. Outer structure sections colors */
+.bg-brand-cream {
+  background-color: #050911 !important;
+}
+
+/* 4. Sub-sections and table lists styling */
+.bg-gray-50, .bg-gray-100, .bg-brand-cream\/40 {
+  background-color: #0d192f !important;
+}
+.border-brand-dark\/10, .border-brand-dark\/15, .border-dashed {
+  border-color: rgba(0, 240, 255, 0.15) !important;
+}
+
+/* 5. Glowing text accents */
+.text-brand-mango {
+  color: #00f0ff !important;
+}
+.bg-brand-dark {
+  background-color: #080f1d !important;
+  border-color: rgba(0, 240, 255, 0.2) !important;
+}
+
+/* 6. Form control elements glowing style */
+input, select, textarea {
+  background-color: #070c17 !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(0, 240, 255, 0.2) !important;
+}
+input:focus, select:focus {
+  border-color: #00f0ff !important;
+  box-shadow: 0 0 8px rgba(0, 240, 255, 0.4) !important;
+}
+
+/* 7. Hover items glow */
+.hover\:bg-gray-50:hover, .hover\:bg-gray-100:hover {
+  background-color: #0e203f !important;
+}
+
+/* Custom scrollbars and high-tech styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #050911;
+}
+::-webkit-scrollbar-thumb {
+  background: #00f0ff;
+  border-radius: 9999px;
+  border: 1px solid #050911;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #39ff14;
+}
+
+/* Glowing cyberpunk utilities */
+.glow-card-cyan {
+  border: 1px solid rgba(0, 240, 255, 0.35) !important;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.15) !important;
+}
+
+.glow-card-green {
+  border: 1px solid rgba(57, 255, 20, 0.35) !important;
+  box-shadow: 0 0 15px rgba(57, 255, 20, 0.15) !important;
+}
+
+/* Sub-panels glassmorphic effect */
+.glass-cyber {
+  background: rgba(11, 18, 34, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 240, 255, 0.2);
+}
+
+/* Neon Glow hover animation for restaurant stalls card */
+.cyber-card-glow-hover {
+  position: relative;
+  transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+  overflow: hidden;
+}
+
+.cyber-card-glow-hover::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(135deg, #00f0ff, transparent, #39ff14, transparent);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.cyber-card-glow-hover:hover {
+  border-color: #00f0ff !important;
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.25), 0 0 50px rgba(57, 255, 20, 0.1) !important;
+}
+
+.cyber-card-glow-hover:hover::after {
+  opacity: 1;
+}
+

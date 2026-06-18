@@ -1,0 +1,6 @@
+{
+  "name": "MDB RESTAURANT DELIVERY",
+  "description": "Plateforme nationale de livraison de repas de cafétérias au Cameroun (Douala & Yaoundé). Commandez en FCFA, payez sécurisé par Mobile Money et suivez votre motard en temps réel par GPS.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
